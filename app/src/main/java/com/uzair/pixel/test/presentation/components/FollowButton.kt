@@ -15,18 +15,18 @@ import com.uzair.pixel.test.presentation.theme.DarkBlue
 @Composable
 fun FollowButton(
     isFollowed: Boolean,
-    onToggleFollow: () -> Unit
+    onClick: () -> Unit
 ) {
     if (isFollowed) {
         OutlinedButton(
-            onClick = onToggleFollow,
+            onClick = onClick,
             border = BorderStroke(1.dp, DarkBlue)
         ) {
             Text(stringResource(R.string.unfollow))
         }
     } else {
         Button(
-            onClick = onToggleFollow,
+            onClick = onClick,
             colors = ButtonDefaults.buttonColors(
                 containerColor = DarkBlue
             )
@@ -41,6 +41,6 @@ fun FollowButton(
 private fun FollowButtonPreview() {
     FollowButton(
         isFollowed = false,
-        onToggleFollow = {}
+        onClick = {}
     )
 }

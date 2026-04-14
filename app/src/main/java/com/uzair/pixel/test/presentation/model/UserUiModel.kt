@@ -1,6 +1,6 @@
 package com.uzair.pixel.test.presentation.model
 
-import com.uzair.pixel.test.util.ReputationCountFormatter
+import java.util.Locale
 
 data class UserUiModel(
     val id: Int,
@@ -9,6 +9,9 @@ data class UserUiModel(
     val reputation: Int,
     val isFollowed: Boolean,
 ) {
-    val reputationDisplayFormat: String =
-        ReputationCountFormatter.format(reputation)
+    val reputationDisplayFormat: String = when {
+        reputation >= 1_000_000 -> String.format(Locale.US, "%.1fM", reputation / 1_000_000.0)
+        reputation >= 1_000 -> String.format(Locale.US, "%.1fK", reputation / 1_000.0)
+        else -> reputation.toString()
+    }
 }

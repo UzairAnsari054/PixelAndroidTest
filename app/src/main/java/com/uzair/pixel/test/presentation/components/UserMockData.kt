@@ -13,14 +13,14 @@ object UserMockData {
         ),
         UserUiModel(
             id = 2,
-            name = "John Doe",
+            name = "Karan Johar",
             imageUrl = "",
             reputation = 45000,
             isFollowed = true
         ),
         UserUiModel(
             id = 3,
-            name = "Jane Smith",
+            name = "Pretty Zinta",
             imageUrl = "",
             reputation = 987000,
             isFollowed = false

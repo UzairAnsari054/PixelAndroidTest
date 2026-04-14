@@ -17,7 +17,6 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.uzair.pixel.test.R
-import com.uzair.pixel.test.presentation.components.UserMockData
 import com.uzair.pixel.test.presentation.model.UserUiModel
 import com.uzair.pixel.test.presentation.theme.LightBlue
 
@@ -66,7 +65,7 @@ fun UserListItem(
 
             FollowButton(
                 isFollowed = user.isFollowed,
-                onToggleFollow = onToggleFollow
+                onClick = onToggleFollow
             )
         }
     }
