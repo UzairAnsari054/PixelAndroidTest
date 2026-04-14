@@ -1,6 +1,5 @@
-package com.uzair.pixel.test.ui.theme
+package com.uzair.pixel.test.presentation.theme
 
-import android.app.Activity
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
