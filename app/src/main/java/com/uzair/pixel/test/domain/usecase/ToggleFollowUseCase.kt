@@ -1,8 +1,6 @@
 package com.uzair.pixel.test.domain.usecase
 
-import com.uzair.pixel.test.domain.model.User
 import com.uzair.pixel.test.domain.repository.UserRepository
-import kotlinx.coroutines.flow.Flow
 
 class ToggleFollowUseCase(
     private val userRepository: UserRepository

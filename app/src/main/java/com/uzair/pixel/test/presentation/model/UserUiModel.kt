@@ -1,7 +1,9 @@
 package com.uzair.pixel.test.presentation.model
 
+import androidx.compose.runtime.Stable
 import java.util.Locale
 
+@Stable
 data class UserUiModel(
     val id: Int,
     val name: String,
