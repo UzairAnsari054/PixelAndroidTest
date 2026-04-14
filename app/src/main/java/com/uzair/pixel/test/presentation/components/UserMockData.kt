@@ -1,9 +1,8 @@
-package com.uzair.pixel.test.presentation
+package com.uzair.pixel.test.presentation.components
 
 import com.uzair.pixel.test.presentation.model.UserUiModel
 
 object UserMockData {
-
     val users = listOf(
         UserUiModel(
             id = 1,

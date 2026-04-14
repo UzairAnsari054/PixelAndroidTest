@@ -1,4 +1,4 @@
-package com.uzair.pixel.test.data.remote.model
+package com.uzair.pixel.test.data.remote
 
 import com.uzair.pixel.test.domain.model.User
 

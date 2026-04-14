@@ -1,4 +1,4 @@
-package com.uzair.pixel.test.presentation.util
+package com.uzair.pixel.test.util
 object ReputationCountFormatter {
 
     fun format(count: Int): String = when {

@@ -1,6 +1,6 @@
 package com.uzair.pixel.test.presentation.model
 
-import com.uzair.pixel.test.presentation.util.ReputationCountFormatter
+import com.uzair.pixel.test.util.ReputationCountFormatter
 
 data class UserUiModel(
     val id: Int,

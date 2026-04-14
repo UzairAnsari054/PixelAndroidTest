@@ -1,9 +1,8 @@
-package com.uzair.pixel.test.presentation.util
+package com.uzair.pixel.test.util
 
 import androidx.annotation.StringRes
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.Immutable
-import androidx.compose.runtime.Stable
 import androidx.compose.ui.res.stringResource
 
 @Immutable

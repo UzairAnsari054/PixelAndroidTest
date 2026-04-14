@@ -1,7 +1,7 @@
-package com.uzair.pixel.test.data.remote.api
+package com.uzair.pixel.test.data.remote
 
 import com.uzair.pixel.test.domain.model.User
 
-interface UserApi {
+interface UserListApi {
     suspend fun fetch(): Result<List<User>>
 }

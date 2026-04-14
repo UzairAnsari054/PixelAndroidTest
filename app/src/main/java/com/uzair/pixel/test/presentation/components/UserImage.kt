@@ -24,7 +24,6 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.uzair.pixel.test.R
 import com.uzair.pixel.test.presentation.theme.DarkBlue
-import com.uzair.pixel.test.presentation.util.customImageLoader
 
 @Composable
 fun UserImage(
@@ -37,7 +36,7 @@ fun UserImage(
     LaunchedEffect(imageUrl) {
         isLoading = true
         bitmap = try {
-            customImageLoader(imageUrl)
+            loadImage(imageUrl)
         } catch (e: Exception) {
             null
         } finally {

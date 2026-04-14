@@ -4,10 +4,10 @@ import android.content.Context
 import android.net.ConnectivityManager
 import androidx.datastore.preferences.preferencesDataStore
 import com.uzair.pixel.test.data.local.UserPreferencesImpl
-import com.uzair.pixel.test.data.remote.api.UserApiImpl
-import com.uzair.pixel.test.data.remote.api.UserApi
+import com.uzair.pixel.test.data.remote.UserListApiImpl
+import com.uzair.pixel.test.data.remote.UserListApi
 import com.uzair.pixel.test.data.repository.UserRepositoryImpl
-import com.uzair.pixel.test.data.remote.parser.UserListNetworkParser
+import com.uzair.pixel.test.data.remote.UserListNetworkParser
 import com.uzair.pixel.test.util.NetworkConnectivityMonitorImpl
 import com.uzair.pixel.test.domain.repository.UserRepository
 import com.uzair.pixel.test.data.local.UserPreferences
@@ -33,8 +33,8 @@ class AppContainerDI(context: Context) {
         appContext.dataStore
     }
 
-    val userApi: UserApi by lazy {
-        UserApiImpl(parser = parser)
+    val userListApi: UserListApi by lazy {
+        UserListApiImpl(parser = parser)
     }
 
     val networkConnectivityMonitor: NetworkConnectivityMonitor by lazy {
@@ -48,7 +48,7 @@ class AppContainerDI(context: Context) {
     val userRepository: UserRepository by lazy {
         UserRepositoryImpl(
             networkConnectivityMonitor = networkConnectivityMonitor,
-            userApi = userApi,
+            userListApi = userListApi,
             userPreferences = userPreferences
         )
     }

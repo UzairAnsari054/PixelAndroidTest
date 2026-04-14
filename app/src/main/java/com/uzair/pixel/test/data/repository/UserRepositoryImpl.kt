@@ -1,6 +1,6 @@
 package com.uzair.pixel.test.data.repository
 
-import com.uzair.pixel.test.data.remote.api.UserApi
+import com.uzair.pixel.test.data.remote.UserListApi
 import com.uzair.pixel.test.domain.model.User
 import com.uzair.pixel.test.domain.repository.UserRepository
 import com.uzair.pixel.test.data.local.UserPreferences
@@ -12,7 +12,7 @@ import java.io.IOException
 
 class UserRepositoryImpl(
     private val networkConnectivityMonitor: NetworkConnectivityMonitor,
-    private val userApi: UserApi,
+    private val userListApi: UserListApi,
     private val userPreferences: UserPreferences
 ) : UserRepository {
     override fun observeUsers(): Flow<Result<List<User>>> =
@@ -22,7 +22,7 @@ class UserRepositoryImpl(
                 return@flow
             }
 
-            emit(userApi.fetch())
+            emit(userListApi.fetch())
         }.combine(userPreferences.followedUsers) { result, followedIds ->
             result.map { users ->
                 users.applyFollowedIds(followedIds)

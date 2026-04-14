@@ -1,7 +1,6 @@
 package com.uzair.pixel.test.util
 
 import com.uzair.pixel.test.R
-import com.uzair.pixel.test.presentation.util.UiMessage
 import org.json.JSONException
 import java.io.IOException
 import java.net.SocketTimeoutException

@@ -1,12 +1,9 @@
-package com.uzair.pixel.test.data.remote.api
+package com.uzair.pixel.test.data.remote
 
 import com.uzair.pixel.test.util.CONNECT_TIMEOUT_MS
 import com.uzair.pixel.test.util.REQUEST_GET
 import com.uzair.pixel.test.util.READ_TIMEOUT_MS
 import com.uzair.pixel.test.util.USERS_ENDPOINT
-import com.uzair.pixel.test.data.remote.model.UserNetworkModel
-import com.uzair.pixel.test.data.remote.model.toUser
-import com.uzair.pixel.test.data.remote.parser.UserListNetworkParser
 import com.uzair.pixel.test.domain.model.User
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
@@ -14,9 +11,9 @@ import java.io.IOException
 import java.net.HttpURLConnection
 import java.net.URL
 
-class UserApiImpl(
+class UserListApiImpl(
     private val parser: UserListNetworkParser
-) : UserApi {
+) : UserListApi {
     override suspend fun fetch(): Result<List<User>> =
         withContext(Dispatchers.IO) {
             try {

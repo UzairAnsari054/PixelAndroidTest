@@ -11,9 +11,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.uzair.pixel.test.presentation.UserMockData
+import com.uzair.pixel.test.presentation.components.UserMockData
 import com.uzair.pixel.test.presentation.model.UserUiModel
-
 
 @Composable
 fun UserList(
@@ -30,12 +29,12 @@ fun UserList(
         items(
             items = users,
             key = { it.id }
-        ) { meal ->
+        ) { user ->
             UserListItem(
-                user = meal,
+                user = user,
                 modifier = Modifier.fillMaxWidth(),
                 onToggleFollow = {
-                    onToggleFollow(meal)
+                    onToggleFollow(user)
                 }
             )
         }
