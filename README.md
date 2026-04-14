@@ -65,3 +65,11 @@ Current status:
 - `./gradlew test` fails because the tests still reference older package names and outdated interfaces/models.
 
 This means the production app code is present, but the test suite needs to be updated to match the current architecture before it can be considered passing.
+
+
+
+https://github.com/user-attachments/assets/4f8907df-e585-465a-9406-617e16bad836
+
+
+
+
